@@ -11,7 +11,7 @@ public static class Program
 {
     private static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
 
-    public static string Name { get; } = Assembly.GetName().Name ?? "LightBulb";
+    public static string Name { get; } = Assembly.GetName().Name ?? "LightBulbPlus";
 
     public static Version Version { get; } = Assembly.GetName().Version ?? new Version(0, 0, 0);
 
@@ -24,7 +24,7 @@ public static class Program
     public static string ExecutableFilePath { get; } =
         Path.ChangeExtension(Assembly.Location, "exe");
 
-    public static string ProjectUrl { get; } = "https://github.com/Tyrrrz/LightBulb";
+    public static string ProjectUrl { get; } = "https://github.com/Primemeow/LightBulbPlus";
 
     public static string ProjectReleasesUrl { get; } = $"{ProjectUrl}/releases";
 
