@@ -41,13 +41,6 @@ public partial class SettingsService() : SettingsBase(GetFilePath(), SerializerC
         set => SetProperty(ref _isFirstTimeExperienceEnabled, value);
     }
 
-    private bool _isUkraineSupportMessageEnabled = true;
-    public bool IsUkraineSupportMessageEnabled
-    {
-        get => _isUkraineSupportMessageEnabled;
-        set => SetProperty(ref _isUkraineSupportMessageEnabled, value);
-    }
-
     private bool _isExtendedGammaRangeUnlocked;
 
     [JsonIgnore] // comes from registry
@@ -262,7 +255,6 @@ public partial class SettingsService() : SettingsBase(GetFilePath(), SerializerC
 
         // Don't reset the first-time experience
         IsFirstTimeExperienceEnabled = false;
-        IsUkraineSupportMessageEnabled = false;
 
         // Trigger UI updates
         OnPropertyChanged(string.Empty);
